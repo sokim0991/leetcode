@@ -1,0 +1,7 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+            nums_map = {}  #숫자라는 키가 들어가면 인덱스가 나오도록 딕셔너리를 만든다.
+            for i, nums in enumerate(nums):
+                if target - nums in nums_map: #target에서 현재 num를 뺀 것이 nums map의 key에 있으면 
+                    return[nums_map[target - nums], i] #현재의 num과 target에서 num을 뺀 배열을 return한다.
+                nums_map[nums] = i 
